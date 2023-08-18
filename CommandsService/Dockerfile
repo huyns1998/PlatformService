@@ -10,4 +10,4 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:3.1
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT [ "dotnet", "CommandsService.dll", "--environment=Development"]
+ENTRYPOINT [ "dotnet", "CommandsService.dll", "--environment=Production"]

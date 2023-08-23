@@ -79,6 +79,7 @@ namespace PlatformService.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"--> _messageBusClient: {_messageBusClient}");
                 Console.WriteLine($"--> Could not send asynchronously: {ex.Message}");
             }
 
